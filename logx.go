@@ -23,10 +23,7 @@ const (
 
 // Core formatter
 func logWithColor(color, label string, format string, args ...any) {
-	if Prefix != "" {
-		Prefix += " " // Ensure a space between prefix and log label
-	}
-	log.Printf("%s%s[%s]%s\t%s\n", color, Prefix, label, colorReset, fmt.Sprintf(format, args...))
+	log.Printf("%s%s [%s]%s\t%s\n", color, Prefix, label, colorReset, fmt.Sprintf(format, args...))
 }
 
 // Logging functions
